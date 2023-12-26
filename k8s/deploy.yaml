@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: quant
+  labels:
+    app: quant
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: quant
+  template:
+    metadata:
+      labels:
+        app: quant
+    spec:
+      containers:
+        - name: quant-container
+          image: zerohertzkr/streamlit-quant:v0.0.0
+          ports:
+            - containerPort: 8501

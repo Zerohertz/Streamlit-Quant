@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: quant-container
-          image: zerohertzkr/streamlit-quant:v0.0.0
+          image: zerohertzkr/streamlit-quant:v1.0.0
           ports:
             - containerPort: 8501
